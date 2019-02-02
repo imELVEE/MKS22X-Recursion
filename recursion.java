@@ -4,8 +4,10 @@ import java.util.List;
 public class recursion{
   public static void main(String[] args){
     System.out.println("TESTING makeAllSums\n------------------------\n");
+    System.out.println("//Should print [0, 1, 2, 3]");
+    System.out.println(makeAllSums(2) + "\n");
     System.out.println("//Should print [0, 3, 2, 5, 1, 4, 3, 6]");
-    System.out.println(makeAllSums(3));
+    System.out.println(makeAllSums(3) + "\n");
   }
 
 
