@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Recursion{
+  /*
   public static void main(String[] args){
     System.out.println("TESTING makeAllSums\n------------------------\n");
     System.out.println("//Should print [0, 1, 2, 3]");
@@ -28,9 +29,10 @@ public class Recursion{
     System.out.println(fib(7) + "\n");
     System.out.println("//Should print 3");
     System.out.println(fib(4) + "\n");
-    System.out.println("//Should print 2971215073");
-    System.out.println(fib(47) + "\n");
+    System.out.println("//Should print 1836311903");
+    System.out.println(fib(46) + "\n");
   }
+  */
 
 
   public static ArrayList<Integer> makeAllSums(int n){
@@ -63,10 +65,8 @@ public class Recursion{
   }
   public static int remember(int previous, int now, int index, int n){
     if (index < n){
-      System.out.println("prev = " + previous + " , now = " + now);
       return remember(now,now+previous,index+1,n);
     }
-    System.out.println("prev = " + previous + " , now = " + now);
     return now;
   }
 }
