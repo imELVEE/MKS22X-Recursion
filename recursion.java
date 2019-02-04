@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Recursion{
+public class recursion{
   /*
   public static void main(String[] args){
     System.out.println("TESTING makeAllSums\n------------------------\n");
