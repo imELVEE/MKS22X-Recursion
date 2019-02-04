@@ -18,6 +18,18 @@ public class Recursion{
     System.out.println(sqrt(4,0.00001) + "\n");
     System.out.println("//Should print something close to 67");
     System.out.println(sqrt(67*67,0.00001) + "\n");
+
+    System.out.println("\nTESTING fib\n------------------------\n");
+    System.out.println("//Should print 0");
+    System.out.println(fib(1) + "\n");
+    System.out.println("//Should print 1");
+    System.out.println(fib(2) + "\n");
+    System.out.println("//Should print 13");
+    System.out.println(fib(7) + "\n");
+    System.out.println("//Should print 3");
+    System.out.println(fib(4) + "\n");
+    System.out.println("//Should print 2971215073");
+    System.out.println(fib(47) + "\n");
   }
 
 
@@ -47,12 +59,14 @@ public class Recursion{
   }
 
   public static int fib(int n){
-    return remember(0,1,0,n);
+    return remember(0,1,1,n);
   }
   public static int remember(int previous, int now, int index, int n){
     if (index < n){
+      System.out.println("prev = " + previous + " , now = " + now);
       return remember(now,now+previous,index+1,n);
     }
+    System.out.println("prev = " + previous + " , now = " + now);
     return now;
   }
 }
