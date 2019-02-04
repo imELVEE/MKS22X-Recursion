@@ -9,7 +9,15 @@ public class Recursion{
     System.out.println("//Should print [0, 3, 2, 5, 1, 4, 3, 6]");
     System.out.println(makeAllSums(3) + "\n");
 
-    
+    System.out.println("\nTESTING sqrt\n------------------------\n");
+    System.out.println("//Should print something close to 1.4142");
+    System.out.println(sqrt(2,0.00001) + "\n");
+    System.out.println("//Should print something close to 3");
+    System.out.println(sqrt(9,0.00001) + "\n");
+    System.out.println("//Should print something close to 2");
+    System.out.println(sqrt(4,0.00001) + "\n");
+    System.out.println("//Should print something close to 67");
+    System.out.println(sqrt(67*67,0.00001) + "\n");
   }
 
 
@@ -29,13 +37,13 @@ public class Recursion{
   }
 
   public static double sqrt(double n, double tolerance){
-    return root(n,tolerance,1.0);
+    return root(n,tolerance,1);
   }
   public static double root(double n, double tolerance, double guess){
     if (Math.abs(guess*guess - n) <= n*tolerance){
       return guess;
     }
-    return root(n,tolerance,(n/guess + guess)/n);
+    return root(n,tolerance,(n/guess + guess)/2.0);
   }
 
 
