@@ -46,5 +46,13 @@ public class Recursion{
     return root(n,tolerance,(n/guess + guess)/2.0);
   }
 
-
+  public static int fib(int n){
+    return remember(0,1,0,n);
+  }
+  public static int remember(int previous, int now, int index, int n){
+    if (index < n){
+      return remember(now,now+previous,index+1,n);
+    }
+    return now;
+  }
 }
