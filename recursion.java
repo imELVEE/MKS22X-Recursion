@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class recursion{
+public class Recursion{
   public static void main(String[] args){
     System.out.println("TESTING makeAllSums\n------------------------\n");
     System.out.println("//Should print [0, 1, 2, 3]");
     System.out.println(makeAllSums(2) + "\n");
     System.out.println("//Should print [0, 3, 2, 5, 1, 4, 3, 6]");
     System.out.println(makeAllSums(3) + "\n");
+
+    
   }
 
 
@@ -24,6 +26,16 @@ public class recursion{
     else{
       mod.add(sum);
     }
+  }
+
+  public static double sqrt(double n, double tolerance){
+    return root(n,tolerance,1.0);
+  }
+  public static double root(double n, double tolerance, double guess){
+    if (Math.abs(guess*guess - n) <= n*tolerance){
+      return guess;
+    }
+    return root(n,tolerance,(n/guess + guess)/n);
   }
 
 
